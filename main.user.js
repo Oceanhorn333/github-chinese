@@ -95,6 +95,7 @@
         return {
             // 当前页面类型
             currentPageType: pageType,
+            // 重置 firstChangeURL
             firstChangeURL: false,
             // 静态词库
             staticDict: {
@@ -140,7 +141,6 @@
                 previousURL = currentURL;
                 updatePageConfig();
                 console.log(`【Debug】页面切换 pageType= ${pageConfig.currentPageType}`);
-                firstChangeURL = false; // 重置 firstChangeURL
             }
         }
 
