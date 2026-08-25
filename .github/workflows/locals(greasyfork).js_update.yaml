@@ -60,6 +60,7 @@ jobs:
         uses: maboloshi/dco-commit-action@v1
         with:
           token: ${{ steps.generate_token.outputs.token }}
+          app-slug: ${{ steps.generate_token.outputs.app-slug }}
           parent-sha: ${{ needs.update_main.outputs.commit-sha }}
           files: "locals(greasyfork).js, main(greasyfork).user.js"
           headline: "main(greasyfork).user.js Sync Thesaurus to ${{ steps.greasyfork_version.outputs.version }}"

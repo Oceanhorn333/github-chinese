@@ -42,5 +42,6 @@ jobs:
         uses: maboloshi/dco-commit-action@v1
         with:
           token: ${{ steps.generate_token.outputs.token }}
+          app-slug: ${{ steps.generate_token.outputs.app-slug }}
           files: "README.md"
           headline: "修改文档: 更新`贡献者列表`"

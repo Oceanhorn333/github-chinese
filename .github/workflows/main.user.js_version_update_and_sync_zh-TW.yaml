@@ -92,6 +92,7 @@ jobs:
         uses: maboloshi/dco-commit-action@v1
         with:
           token: ${{ steps.generate_token.outputs.token }}
+          app-slug: ${{ steps.generate_token.outputs.app-slug }}
           files: "main.user.js, main(nju.edu).user.js"
           headline: "main.user.js, main(nju.edu).user.js Update to ${{ steps.main_version.outputs.version }}"
 
@@ -149,6 +150,7 @@ jobs:
         uses: maboloshi/dco-commit-action@v1
         with:
           token: ${{ steps.generate_token.outputs.token }}
+          app-slug: ${{ steps.generate_token.outputs.app-slug }}
           parent-sha: ${{ needs.update_main.outputs.commit-sha }}
           files: "main_zh-TW.user.js, locals_zh-TW.js"
           headline: "main_zh-TW.user.js Sync Thesaurus to ${{ steps.TW_version.outputs.version }}"
